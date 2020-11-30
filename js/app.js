@@ -32,6 +32,29 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	})
 
+	// Yandex map lazy load
+	const mapContainer = document.getElementById('map_container')
+	const optionsMap = {
+		once: true,
+		passive: true,
+		capture: true
+	}
+	mapContainer.addEventListener('click', startLazyMap, optionsMap)
+	mapContainer.addEventListener('mouseover', startLazyMap, optionsMap)
+	mapContainer.addEventListener('touchstart', startLazyMap, optionsMap)
+	mapContainer.addEventListener('touchmove', startLazyMap, optionsMap)
+
+	let mapLoaded = false
+	function startLazyMap () {
+		if (!mapLoaded) {
+			const mapBlock = document.getElementById('ymap_lazy')
+			mapLoaded = true
+			mapBlock.setAttribute('src', mapBlock.getAttribute('data-src'))
+			mapBlock.removeAttribute('data_src')
+			console.log('YMAP LOADED')
+		}
+	}
+
 	// Mobile menu
 	const menu = document.querySelector('.header__nav')
 	const burger = document.querySelector('.header__burger')
