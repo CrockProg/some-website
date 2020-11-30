@@ -1,0 +1,75 @@
+// USER VARIABLES SECTION
+
+$accent: #103c5f // Accent Color
+$white: #fff //White Color
+$shadow: rgba(0, 0, 0, .25) // Shadow Color
+$shadow2: rgba(0, 0, 0, .8) // Second Shadow Color
+$lochmara: #0277bd //Lochmara Color
+$black: #000 //Black Color
+$fontsize: 16px // Body Font Size
+$textcolor: #333 // Text Color
+$system: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+$brionipro: 'BrioniPro', sans-serif // BrioniPro Font Family
+$yesevanne: 'Yeseva One', sans-serif // Yeseva One Font Family
+$opensans: 'OpenSans', sans-serif // OpenSans One Font Family
+
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/owl.carousel/src/scss/owl.carousel.scss'
+// @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		font-display: swap // Uncomment to initially display system fonts
+		src: local($fname), url($furl) format('woff2')
+
+
+@include font('Yeseva One', normal, 400, '../fonts/YesevaOne-Regular.woff2')
+
+@include font('OpenSans', normal, 400, '../fonts/OpenSans-Regular.woff2')
+
+@include font('BrioniPro', normal, 300, '../fonts/BrioniPro-Light.woff2')
+@include font('BrioniPro', italic, 300, '../fonts/BrioniPro-LightItalic.woff2')
+@include font('BrioniPro', normal, 400, '../fonts/BrioniPro-Regular.woff2')
+@include font('BrioniPro', normal, 700, '../fonts/BrioniPro-Bold.woff2')
+@include font('BrioniPro', italic, 700, '../fonts/BrioniPro-BoldItalic.woff2')
+
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+    color: $lochmara
+    opacity: 1
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	color: $textcolor
+	font-family: $brionipro
+	font-size: $fontsize
+	line-height: 1.65
+	min-width: 320px
+	overflow-x: hidden
+	position: relative

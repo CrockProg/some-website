@@ -1,0 +1,1045 @@
+@import config
+
+// CUSTOM USER STYLES & IMPORTS
+
+.ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+
+
+.label
+    margin-bottom: 0
+    white-space: nowrap
+
+
+.lock
+    overflow: hidden
+
+
+.site-container
+    overflow: hidden
+
+
+.container
+    margin-left: auto
+    margin-right: auto
+    padding-left: 15px
+    padding-right: 15px
+    width: 100%
+
+
+.overlay
+    background-color: $black
+    height: 100%
+    left: 0
+    opacity: 0
+    position: fixed
+    top: 0
+    visibility: hidden
+    width: 100%
+    z-index: 99
+
+
+.popup-form
+    background: $white
+    border-radius: 10px
+    box-shadow: 4px 4px 10px $accent
+    height: 337px
+    margin: 0 auto
+    width: 450px
+
+
+.flex
+    display: flex
+
+    &-services
+        padding-bottom: 110px
+        padding-top: 30px
+
+    &__calculator
+        color: $accent
+        flex-direction: column
+        font-family: $opensans
+        width: 100%
+
+    &-footer
+        align-items: center
+        justify-content: space-between
+
+
+.btn
+    background-color: $accent
+    border: 0
+    border-radius: 3px
+    box-shadow: 4px 4px 5px $shadow
+    color: $white
+    display: inline-block
+    font-size: 16px
+    transition: all .25s ease
+
+    &:hover
+        background-color: $white
+        color: $accent
+        cursor: pointer
+        text-decoration: none
+
+
+.title
+    color: $accent
+    font-size: 42px
+    line-height: 50px
+    padding-bottom: 13px
+    position: relative
+    text-align: center
+
+    &::after
+        background-color: $lochmara
+        bottom: 0
+        content: ''
+        display: block
+        height: 2px
+        left: 50%
+        position: absolute
+        transform: translate(-50%)
+        width: 70px
+
+
+.subtitle
+    color: $accent
+    font-size: 32px
+    line-height: 38px
+    padding-bottom: 13px
+    position: relative
+
+    &::after
+        background-color: $lochmara
+        bottom: 0
+        content: ''
+        display: block
+        height: 2px
+        position: absolute
+        width: 97px
+
+
+.header
+    background-color: $accent
+
+    &__container
+        align-items: center
+        display: flex
+        justify-content: space-between
+        padding: 6px 15px
+        position: relative
+
+    &__contact
+        color: $white
+        font-family: $brionipro
+        font-weight: 700
+
+        &::before
+            background: url('../images/dest/phone-icon.svg') no-repeat
+            background-position: center
+            background-size: cover
+            content: ''
+            display: inline-block
+            height: 15px
+            margin-right: 5px
+            vertical-align: middle
+            width: 15px
+
+        &:hover
+            color: $white
+
+    &__burger
+        background-color: transparent
+        border: 0
+        cursor: pointer
+        display: none
+        height: 17px
+        position: relative
+        width: 30px
+
+        &::after,
+        &::before
+            background-color: $white
+            content: ''
+            height: 3px
+            left: 0
+            position: absolute
+            top: 0
+            width: 100%
+
+        &::after
+            bottom: 0
+            top: auto
+
+        span
+            background-color: $white
+            display: inline-block
+            height: 3px
+            left: 0
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            width: 100%
+
+
+.menu
+    align-items: center
+    display: flex
+    font-family: $yesevanne
+    margin-left: 85px
+
+    &__item
+        margin-right: 14px
+
+        &:last-child
+            margin-right: 0
+
+    &__link
+        color: $white
+
+        &:last-child
+            padding-right: 0
+
+        &:hover
+            color: $white
+
+    &-transform
+        transform: translateX(-100%)
+        transition: transform .3s
+
+
+.first
+    background: url('../images/dest/main-bg.jpg') no-repeat
+    background-color: $accent
+    background-position: center
+    background-size: cover
+
+    &__container
+        padding-bottom: 275px
+        padding-top: 223px
+
+    &__content
+        padding-left: 5%
+
+    &__title
+        color: $white
+        font-size: 42px
+        font-weight: 400
+        line-height: 50px
+        max-width: 695px
+
+    &__descr
+        color: $white
+        font-size: 24px
+        line-height: 29px
+        margin-bottom: 40px
+
+        span
+            font-style: italic
+            font-weight: 700
+
+    &__btn
+        font-size: 26px
+        line-height: 31px
+        padding: 22px 30px
+
+
+.about
+    padding-bottom: 92px
+    padding-top: 50px
+
+    &__text
+        font-size: 20px
+        font-weight: 300
+        line-height: 24px
+        max-width: 540px
+        padding-top: 10px
+
+        span
+            color: $accent
+            font-weight: 700
+
+    &__img
+        max-width: 100%
+
+    &__row
+        align-items: center
+        display: flex
+        justify-content: space-between
+        padding-top: 43px
+        width: 100%
+
+    &__left,
+    &__right
+        flex: 0 0 50%
+        max-width: 50%
+
+    &__right
+        padding-left: 40px
+
+
+.reviews
+    padding-top: 36px
+
+    &__title
+        margin-bottom: 55px
+
+    .owl-carousel
+
+        .owl-dots
+            display: flex
+            justify-content: center
+            padding-top: 12px
+
+            button
+                background-color: $white
+                border: 1px solid $accent
+                height: 7px
+                margin-right: 10px
+                transition: background-color .25s ease
+                width: 50px
+
+                &:last-child
+                    margin-right: 0
+
+                &:hover
+                    background-color: $accent
+
+            .active
+                background-color: $accent
+
+
+.carousel-reviews
+
+    &__customer
+        display: flex
+        margin-bottom: 15px
+
+    &__img
+        border: 1px solid $lochmara
+        border-radius: 55px
+        height: 105px
+        margin-right: 13px
+        padding: 2px
+        width: 105px
+
+    &__bio
+        padding-top: 35px
+
+    &__name
+        color: $accent
+        font-size: 20px
+        font-weight: 400
+        line-height: 15px
+
+    &__date
+        color: $lochmara
+        display: block
+        font-size: 16px
+        font-style: italic
+        line-height: 19px
+
+    &__text
+        color: $black
+        font-weight: 300
+        line-height: 19px
+        max-width: 540px
+
+
+.plan-wrapper
+    display: flex
+
+
+.services
+    background: url('../images/dest/servies.png') no-repeat
+    background-position: center
+    background-size: cover
+    padding-bottom: 30px
+
+
+.info
+    max-width: 350px
+    padding-top: 35px
+
+    &__title
+        color: $accent
+        font-size: 24px
+        font-weight: 500
+        line-height: 29px
+
+    &__descr
+        font-weight: 300
+        line-height: 19px
+        margin-bottom: 32px
+
+    &__btn
+        font-weight: 400
+        line-height: 19px
+        padding: 12px 32px
+
+
+.plan
+    margin-right: 33px
+    position: relative
+
+    &__img
+        max-width: 100%
+
+    &__dot
+        background: $accent
+        border: 3px solid $lochmara
+        border-radius: 14px
+        padding: 7px
+        position: absolute
+        transition: .25s border ease
+
+        &:hover,
+        &-active
+            border: 3px solid $accent
+            cursor: pointer
+
+        &-1
+            bottom: 8%
+            left: 57%
+
+        &-2
+            bottom: 18%
+            left: 14%
+
+        &-3
+            right: 30%
+            top: 22%
+
+        &-4
+            left: 40%
+            top: 25%
+
+        &-5
+            bottom: 34%
+            left: 26%
+
+        &-6
+            bottom: 27%
+            left: 46%
+
+        &-7
+            bottom: 37%
+            right: 3%
+
+
+.contact-form
+    padding: 20px 65px
+
+    &__title
+        color: $accent
+        font-size: 20px
+        line-height: 24px
+        margin: 15px auto 25px
+        max-width: 214px
+        text-align: center
+
+    &__input
+        border: 1px solid $accent
+        border-radius: 3px
+        color: $lochmara
+        margin-bottom: 15px
+        padding: 6px 20px
+        width: 100%
+
+    &__btn
+        display: block
+        margin: 15px auto
+        padding: 3px 41px
+
+
+.preliminary-form
+    padding: 40px 32px
+
+    &__title
+        color: $accent
+        font-size: 20px
+        line-height: 24px
+        margin: 15px auto
+        text-align: center
+
+    &__row
+        color: $accent
+        display: flex
+        font-size: 18px
+        justify-content: space-between
+
+    &__hr
+        border: 1px solid $accent
+
+    &__btn
+        color: $white
+        padding: 3px 0
+        text-align: center
+        width: 100%
+
+        &:nth-child(1)
+            margin-right: 25px
+
+        &:nth-child(2)
+            margin-left: 25px
+
+
+.calculator
+
+    &__row
+        display: flex
+        width: 100%
+
+        &-col
+
+            &:last-child
+                margin-right: 10px
+
+        &-btn
+            flex-direction: column-reverse
+            width: calc(26% - 10px)
+
+    &__title
+        font-size: 42px
+        font-weight: 700
+        margin-bottom: 34px
+        padding-bottom: 20px
+
+        &::after
+            width: 70px
+
+    &__btn
+        height: 50px
+        line-height: 50px
+        text-align: center
+
+    &__input
+        appearance: none
+        background: url('../images/dest/arrow.svg') no-repeat
+        background-color: $white
+        background-position-x: 94%
+        background-position-y: 55%
+        border: 1px solid $lochmara
+        border-radius: 0
+        color: $accent
+        height: 50px
+        line-height: 21px
+        padding: 0 10px
+        width: 100%
+
+        &-num
+            appearance: textfield
+            background: 0
+            background-color: $white
+
+
+.contacts
+    margin: 20px 0
+    position: relative
+
+    &__wrapper
+        padding: 20px 0
+
+    &__title
+        font-size: 42px
+        line-height: 50px
+        margin-bottom: 30px
+
+        &::after
+            width: 70px
+
+    &__block
+        background: $white
+        margin-top: 40px
+        min-height: 502px
+        padding: 40px 30px
+        position: relative
+        width: 525px
+        z-index: 1
+
+    &__list
+        max-width: 200px
+
+    &__subtitle
+        color: $accent
+        font-size: 24px
+        font-weight: 700
+        line-height: 29px
+        margin-bottom: 14px
+
+    &__info
+        font-weight: 300
+        line-height: 19px
+        margin-bottom: 15px
+
+    &__link
+        color: $black
+        transition: color .25s ease
+
+        &:hover
+            color: $accent
+
+    &__map
+        height: 100%
+        position: absolute
+        width: 100%
+
+
+.footer
+    background-color: $accent
+    color: $white
+    font-size: 14px
+    font-weight: 300
+    padding: 12px 0
+
+    &__logo
+        margin-right: 10px
+
+    &__menu
+        margin-bottom: 0
+
+    &__link
+        color: $white
+
+        &:hover
+            color: $white
+
+
+@media (min-width: 1200px)
+    .container
+        max-width: 1140px
+
+@media (max-width: 992px)
+    .container
+        max-width: 960px
+
+    .menu
+        margin-left: 0
+
+    .about
+
+        &__text
+            padding-top: 0
+
+
+@media (max-width: 768px)
+    .container
+        max-width: 720px
+
+    .flex
+
+        &-services
+            flex-direction: column
+            padding-bottom: 45px
+            padding-top: 60px
+
+        &__calculator
+            margin-bottom: 15px
+
+
+    .title,
+    .subtitle
+        font-size: 36px
+        line-height: 43px
+
+
+    .popup-form
+        width: 80%
+
+
+    .menu
+        align-items: flex-start
+        flex-direction: column
+        margin-left: 0
+        padding: 0
+        padding-top: 10%
+        position: relative
+
+        &__item
+            font-size: 20px
+            padding: 0
+            position: static
+            width: 100%
+
+        &__link
+            align-items: center
+            border-bottom: 1px solid $white
+            display: flex
+            justify-content: space-between
+            padding: 20px 30px
+            width: 100%
+
+
+    .overlay
+
+        &-open
+            opacity: .55
+            transition: all .3s
+            visibility: visible
+
+
+    .header
+
+        &__burger
+            display: block
+
+        &__nav
+            background-color: $accent
+            box-shadow: 5px 0 15px -5px $shadow2
+            height: 100%
+            left: 0
+            max-width: 400px
+            overflow-x: hidden
+            overflow-y: auto
+            position: fixed
+            top: 0
+            transform: translateX(-150vw)
+            width: 80%
+            z-index: 100
+
+            &-open
+                transform: translateX(0)
+                transition: all .3s
+
+        &__contact
+            display: none
+
+
+    .first
+        background: url('../images/dest/main-bg-tablet.png') no-repeat
+
+        &__container
+            padding-top: 248px
+
+        &__content
+            padding-left: 0
+
+        &__title
+            font-size: 36px
+            line-height: 43px
+            margin-bottom: 12px
+            max-width: 87%
+
+        &__descr
+            font-size: 18px
+            line-height: 22px
+            margin-bottom: 20px
+
+        &__btn
+            font-size: 22px
+            line-height: 26px
+
+
+    .about
+        padding-top: 65px
+
+        &__row
+            padding-top: 27px
+
+        &__left,
+        &__right
+            flex: 0 0 100%
+            max-width: 100%
+
+        &__text
+            max-width: 100%
+
+        &__right
+            display: none
+
+
+    .reviews
+        padding-top: 30px
+
+        &__title
+            font-size: 28px
+            margin-bottom: 44px
+            padding-bottom: 8px
+            text-align: center
+
+            &::after
+                left: 50%
+                transform: translate(-50%)
+
+
+    .carousel-reviews
+
+        &__customer
+            flex-direction: column
+            margin-bottom: 38px
+
+        &__img
+            margin: 0 auto
+
+        &__bio
+            padding-top: 9px
+            text-align: center
+
+        &__text
+            max-width: 100%
+
+
+    .plan
+        margin-right: 0
+
+
+    .info
+        max-width: 100%
+
+        &__descr
+            margin-bottom: 20px
+
+
+    .calculator
+
+        &__title
+            margin-bottom: 30px
+            padding-bottom: 10px
+
+        &__form
+            flex-direction: column
+
+        &__row
+
+            &-wrapper
+                padding: 0 95px
+
+            &-col
+                flex-direction: column
+                margin: 0 15px
+
+            &-btn
+                margin: 0 auto
+                width: 32%
+
+
+    .services
+        padding-bottom: 0
+
+
+    .contacts
+
+        &__title
+            font-size: 42px
+
+        &__block
+            min-height: 360px
+            padding: 35px 30px 25px
+            width: 53%
+
+
+@media (max-width: 576px)
+    .container
+        max-width: 540px
+
+
+    .popup-form
+        width: 95%
+
+
+    .flex
+
+        &-services
+            padding-bottom: 35px
+            padding-top: 15px
+
+        &__calculator
+            font-size: 12px
+            width: initial
+
+        &-footer
+            align-items: baseline
+            flex-direction: column
+
+
+    .title,
+    .subtitle
+        font-size: 20px
+        line-height: 24px
+        padding-bottom: 6px
+
+
+    .first
+
+        &__container
+            padding-bottom: 135px
+            padding-top: 90px
+
+        &__title
+            font-size: 22px
+            line-height: 22px
+            margin-bottom: 4px
+            max-width: 100%
+
+        &__descr
+            font-size: 12px
+            line-height: 14px
+
+        &__btn
+            font-size: 14px
+            line-height: 17px
+            padding: 12px 23px
+
+
+    .about
+        padding-bottom: 44px
+        padding-top: 28px
+
+        &__row
+            padding-top: 13px
+
+        &__text
+            font-size: 14px
+            line-height: 17px
+
+
+    .reviews
+        padding-top: 40px
+
+        &__title
+            margin-bottom: 28px
+
+        .owl-carousel
+
+            .owl-dots
+
+                button
+                    margin-right: 5px
+                    width: 25px
+
+
+    .carousel-reviews
+
+        &__customer
+            margin-bottom: 10px
+
+        &__bio
+            padding-top: 5px
+
+        &__name
+            font-size: 16px
+            line-height: 15px
+
+        &__date
+            font-size: 12px
+            line-height: 14px
+
+        &__text
+            font-size: 14px
+            line-height: 17px
+
+
+    .plan
+        margin-bottom: 22px
+
+
+    .info
+        padding-top: 0
+
+        &__title
+            font-size: 16px
+            line-height: 19px
+
+        &__descr
+            font-size: 14px
+            line-height: 17px
+            margin-bottom: 5px
+
+        &__btn
+            font-size: 12px
+            line-height: 14px
+            padding: 8px 21px
+
+
+    .preliminary-form
+        padding: 20px
+
+        &__row
+            font-size: 16px
+
+        &__btn
+            font-size: 13px
+
+            &:nth-child(1)
+                margin-right: 0
+
+
+    .services
+        padding-bottom: 0
+
+
+    .calculator
+
+        &__title
+            font-size: 16px
+            line-height: 19px
+            margin-bottom: 20px
+
+        &__row
+            flex-direction: column
+            width: initial
+
+            &-wrapper
+                padding: 0 20px
+
+            &-btn
+                padding: 0 20px
+                width: 100%
+
+            &-col
+
+                &:last-child
+                    margin-right: 15px
+
+        &__input
+            height: 30px
+
+        &__btn
+            font-size: 12px
+            height: 30px
+            line-height: 27px
+            margin: 2px 14px
+
+
+    .contact-form
+        padding: 20px 42px
+
+
+    .contacts
+        margin: 5px 0
+
+        &__wrapper
+            padding: 5px 0
+
+        &__title
+            font-size: 20px
+            line-height: 24px
+            margin-bottom: 15px
+
+        &__block
+            margin-top: 10px
+            min-height: 220px
+            padding: 20px 34px 15px
+            width: 77%
+
+        &__subtitle
+            font-size: 14px
+            line-height: 17px
+            margin-bottom: 4px
+
+        &__info
+            font-size: 12px
+            line-height: 14px
+            margin-bottom: 10px
+
+
+    .footer
+        font-size: 12px
+        padding: 4px 0
+
+        &__left
+            margin-bottom: 10px
+
