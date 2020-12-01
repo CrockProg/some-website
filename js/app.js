@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function () {
 			mapLoaded = true
 			mapBlock.setAttribute('src', mapBlock.getAttribute('data-src'))
 			mapBlock.removeAttribute('data_src')
-			console.log('YMAP LOADED')
 		}
 	}
 
