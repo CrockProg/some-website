@@ -1,0 +1,49 @@
+files:
+    include: '**/*.sass'
+    ignore: '**/_config.sass'
+options:
+    formatter: stylish
+rules:
+    bem-depth:
+        - 0
+        - max-depth: 2
+    border-zero:
+        - 1
+        - convention: zero
+    brace-style:
+        - 1
+        - allow-single-line: true
+    class-name-format:
+        - 1
+        - convention: hyphenatedbem
+    clean-import-paths:
+        - 1
+        - filename-extension: false
+        - leading-underscore: false
+    empty-line-between-blocks:
+        - 1
+        - ignore-single-line-rulesets: true
+    extends-before-declarations: 1
+    extends-before-mixins: 1
+    final-newline:
+        - 1
+        - include: true
+    force-attribute-nesting: 1
+    force-element-nesting: 1
+    force-pseudo-nesting: 1
+    function-name-format:
+        - 1
+        - allow-leading-underscore: true
+        - convention: hyphenatedlowercase
+    hex-length:
+        - 1
+        - style: short
+    hex-notation:
+        - 1
+        - style: lowercase
+    id-name-format:
+        - 1
+        - convention: hyphenatedlowercase
+    indentation:
+        - 1
+        - size: 4

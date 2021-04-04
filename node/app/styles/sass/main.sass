@@ -1,0 +1,442 @@
+@import config
+@import 'blocks/**/*'
+
+
+.container
+    margin: 0 auto
+    max-width: 970px
+    padding: 0 15px
+
+
+.ul
+    list-style-type: none
+    margin-bottom: 0
+    padding-left: 0
+
+.link-btn
+    background-color: $accent
+    border: 2px solid $accent
+    color: $white
+    display: inline-block
+    font-size: 13px
+    font-weight: 700
+    height: max-content
+    letter-spacing: .5px
+    line-height: 18px
+    padding: 9px 25px
+    text-transform: uppercase
+    transition: background-color .25s, color .25s
+
+    &:hover
+        background-color: $white
+        color: $accent
+        text-decoration: none
+
+
+
+.title
+    font-size: 18px
+    font-weight: 700
+    letter-spacing: 2.3px
+    line-height: 25px
+    padding-bottom: 10px
+    position: relative
+    text-align: center
+    text-transform: uppercase
+
+    &::after
+        background-color: $curiousblue
+        bottom: 0
+        content: ''
+        display: block
+        height: 2px
+        position: absolute
+        width: 50px
+
+
+.header
+    background: url('../images/dist/header-bg.jpg') no-repeat
+    background-position: center
+    background-size: cover
+    color: $white
+
+    &__container
+        padding: 40px 0 70px
+
+    &__logo
+        display: block
+        margin: 0 auto
+        margin-bottom: 305px
+        width: min-content
+
+    &__title
+        font-family: $bebasneue
+        font-size: 60px
+        letter-spacing: 5.7px
+        line-height: 70px
+        margin-bottom: 0
+        text-align: center
+
+    &__descr
+        font-weight: 600
+        line-height: 22px
+        margin-bottom: 220px
+        text-align: center
+
+    &__scroll-msg
+        display: block
+        font-size: 11px
+        font-weight: 600
+        letter-spacing: 3.7px
+        line-height: 15px
+        margin: 0 auto
+        text-align: center
+        text-transform: uppercase
+
+
+.navbar
+    border-bottom: 1px solid $mercury
+
+    &__container
+        align-content: center
+        display: flex
+        justify-content: space-between
+        max-width: 945px
+        padding: 20px 0
+
+
+.nav
+    align-items: center
+    display: flex
+
+    &__list
+        align-items: center
+        display: flex
+
+    &__item
+        font-size: 13px
+        font-weight: 600
+        line-height: 16px
+        margin-right: 42px
+
+        &:last-child
+            margin-right: 0
+
+
+    &__link
+        color: $textcolor
+        opacity: .25s
+        text-transform: uppercase
+
+        &:hover
+            color: $accent
+            text-decoration: none
+
+        &--active
+            color: $accent
+
+
+.story
+    padding-top: 57px
+
+    &__container
+        display: flex
+        padding: 0
+
+    &__title
+
+        &::after
+            left: 50%
+            transform: translate(-50%)
+
+    &__subtitle
+        font-size: 20px
+        font-weight: 700
+        line-height: 27px
+        max-width: 395px
+
+        span
+            color: $curiousblue
+
+    &__about
+        flex: 0 0 auto
+        padding-top: 46px
+        width: 50%
+
+    &__list
+        display: flex
+        flex: 0 0 auto
+        justify-content: space-between
+        padding-top: 78px
+        width: 50%
+
+    &__info
+        font-size: 13px
+        letter-spacing: .1875px
+        line-height: 23px
+        margin-top: 30px
+        max-width: 410px
+
+    &__item
+        background: $curiousblue
+        background-repeat: no-repeat
+        background-size: cover
+        height: 224px
+        padding: 15px 14px
+        width: 140px
+
+        &:nth-child(1)
+            background-image: url('../images/dist/plan.jpg')
+            margin-left: 10px
+
+        &:nth-child(2)
+            background-image: url('../images/dist/manage.jpg')
+
+        &:nth-child(3)
+            background-image: url('../images/dist/build.jpg')
+
+    &__slogan
+        color: $white
+        font-size: 24px
+        font-weight: 800
+        line-height: 29px
+        text-transform: uppercase
+
+        span
+            display: block
+
+
+.capabilities
+    padding-bottom: 125px
+    padding-top: 103px
+
+    &__line
+        display: flex
+        justify-content: space-between
+
+    &__title
+        font-size: 18px
+        height: max-content
+        line-height: 25px
+        text-align: left
+
+    &__info
+        font-size: 11px
+        letter-spacing: .2px
+        line-height: 19px
+        margin-left: 125px
+        max-width: 405px
+
+    &__btn
+        padding: 9px 27px
+
+    &__list
+        display: flex
+        margin-top: 60px
+
+    &__subtitle
+        font-size: 16px
+        font-weight: 700
+        line-height: 24px
+        margin-top: 25px
+        text-transform: uppercase
+
+    &__item
+        border: 1px solid $mercury
+        margin-right: 28px
+        padding: 40px 26px
+        padding-bottom: 18px
+
+        &:last-child
+            margin-right: 0
+
+    &__descr
+        font-size: 13px
+        line-height: 23px
+        margin-top: 15px
+
+
+.build
+    background: url('../images/dist/build-bg.jpg') no-repeat
+    background-position: center
+    background-size: cover
+    padding-bottom: 230px
+    padding-top: 115px
+    text-align: center
+
+    &__title
+        font-size: 30px
+        font-weight: 700
+        letter-spacing: .15px
+        line-height: 36px
+        margin: 0 auto
+        max-width: 350px
+        text-align: center
+
+    &__btn
+        margin: 0 auto
+        margin-top: 32px
+
+
+.contact
+    align-items: center
+    background: $woodsmoke
+    display: flex
+    justify-content: center
+    padding: 30px 0
+
+    &__title
+        color: $white
+        font-size: 22px
+        font-weight: 700
+        letter-spacing: .85px
+        line-height: 30px
+        margin-bottom: 0
+        margin-right: 70px
+
+    &__form
+        display: flex
+
+    &__input,
+    &__btn
+        border-radius: 0
+        display: inline-block
+
+    &__input
+        border: 1px solid $dustygray
+        border-right: 0
+        font-size: 14px
+        padding: 7.5px 74px 7.5px 16px
+        width: 250px
+
+    &__btn
+        background: $accent
+        border: 1px solid $accent
+        color: $white
+        font-size: 13px
+        font-weight: 700
+        padding: 7.5px 50px
+        text-transform: uppercase
+        transition: background .25s ease, color .25s ease
+
+        &:hover
+            background: $white
+            color: $accent
+
+
+.footer
+    background: $bunker
+    color: $white
+    font-size: 11px
+    padding-top: 42px
+
+    &__title
+        grid-area: title
+        text-transform: uppercase
+
+    &__logo
+        display: block
+        margin-top: 15px
+
+    &__info
+        letter-spacing: .85px
+        line-height: 19px
+        margin-top: 15px
+        max-width: 250px
+
+    &__menu
+        display: flex
+        justify-content: space-between
+
+    &__submenu
+
+        &--social
+            display: flex
+
+        &--grid
+            letter-spacing: .85px
+
+            &:nth-child(3)
+                margin-left: 27px
+
+            &:nth-child(4)
+                margin-left: 29px
+
+    &__subitem
+        margin-bottom: 7px
+
+    &__link
+        color: $white
+        text-transform: uppercase
+
+        &:hover
+            color: $white
+
+    &__item
+
+        &--grid
+            display: grid
+            grid-template-areas:  'title title title' '. . .'
+            grid-template-columns: 1fr 1fr 1fr
+            grid-template-rows: 26.4px 1fr
+
+    &__adress
+        letter-spacing: .84px
+        line-height: 16px
+        max-width: 110px
+
+    &__tel,
+    &__email
+        color: $white
+        letter-spacing: .84px
+        line-height: 16px
+        margin-bottom: 13px
+
+        &:hover
+            color: $white
+
+
+    &__social
+        display: block
+        height: 12px
+        margin-right: 26px
+        margin-top: 30px
+        width: 12px
+
+        &--fb
+            background: url('../images/dist/fb.png') no-repeat
+            background-position: center
+            background-size: cover
+
+        &--tw
+            background: url('../images/dist/tw.png') no-repeat
+            background-position: center
+            background-size: cover
+
+        &--gl
+            background: url('../images/dist/gl.png') no-repeat
+            background-position: center
+            background-size: cover
+
+    &__line
+        background: $woodsmoke
+        letter-spacing: .84px
+        line-height: 13px
+        margin-top: 30px
+        padding: 23px 0
+
+    &__copy
+        text-align: center
+
+
+
+
+
+
+
+
+
+
+
+
+

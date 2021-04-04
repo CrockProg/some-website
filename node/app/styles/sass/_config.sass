@@ -1,0 +1,68 @@
+// USER VARIABLES SECTION
+
+$accent: #00A4E5 // Accent Color
+$curiousblue: #16ACE8 // Curious Blue Color
+$white: #FFFFFF // White Color
+$mercury: #E6E6E6 // Mercury Color
+$woodsmoke: #171819 // Woodsmoke Color
+$dustygray: #979797 // Dusty Gray Color
+$bunker: #141A20 // Bunker Color
+$fontsize: 16px // Body Font Size
+$textcolor: #48555B // Text Color
+$lineheight: 1.65 // Document Line Height
+$bebasneue: BebasNeue, sans-serif // User Font Family
+$opensans: OpenSans, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+// @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+
+@include font('BebasNeue', normal, 700, '../fonts/BebasNeueBold.woff2')
+@include font('OpenSans', normal, 400, '../fonts/OpenSans-Regular.woff2')
+@include font('OpenSans', normal, 600, '../fonts/OpenSans-SemiBold.woff2')
+@include font('OpenSans', normal, 700, '../fonts/OpenSans-Bold.woff2')
+@include font('OpenSans', normal, 800, '../fonts/OpenSans-ExtraBold.woff2')
+
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $opensans
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
